@@ -7,3 +7,8 @@ The project was in collaboration with Alexander Ahrens and under the supervision
 ## Background
 
 The Schrödinger equation is the central equation of quantum mechanics.
+
+## Use
+
+Open the notebook in-browser via Google Colab: https://colab.research.google.com/github/Tiger-Du/blob/main/SE-PINN.ipynb.
+
