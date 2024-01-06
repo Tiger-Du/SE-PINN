@@ -4,6 +4,10 @@ This is the official GitHub repository for _Solving the Schrödinger Equation vi
 
 The project was in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/ipek-oguz) at Vanderbilt University.
 
+#### Animation of the Predicted Energy Eigenstate of the PINN (Left) and the Predicted Energy Eigenvalue of the PINN (Right)
+
+![Animation of PINN](SE-PINN.gif)
+
 ## Background
 
 The Schrödinger equation is the central equation of quantum mechanics.
