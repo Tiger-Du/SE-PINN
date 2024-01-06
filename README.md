@@ -14,5 +14,5 @@ The Schrödinger equation is the central equation of quantum mechanics.
 
 ## Use
 
-Open the notebook in-browser via Google Colab: https://colab.research.google.com/github/Tiger-Du/blob/main/SE-PINN.ipynb.
+Open the notebook in-browser via Google Colab: https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/SE-PINN.ipynb.
 
