@@ -1,12 +1,10 @@
 # SE-PINN
 
-## Summary
-
 This is the official GitHub repository for _Solving the Schrödinger Equation via Physics-Informed Machine Learning_.
 
 The research was in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/ipek-oguz) at Vanderbilt University.
 
-#### Animation of the Predicted Energy Eigenvector (Left) and the Predicted Energy Eigenvalue (Right)
+#### Figure: Animation of the Predicted Energy Eigenvector (Left) and the Predicted Energy Eigenvalue (Right)
 
 ![Animation of PINN](SE-PINN.gif)
 
