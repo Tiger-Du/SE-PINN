@@ -12,8 +12,8 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 ![Animation of PINN](animation.gif)
 
-## Usage
+### Usage
 
 Open the notebook interactively via Google Colab: https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/SE-PINN.ipynb.
 
-Open the notebook non-interactively via GitHub: https://github.com/Tiger-Du/SE-PINN/blob/main/SE-PINN.ipynb.
+Open the notebook non-interactively via GitHub: https://github.com/Tiger-Du/SE-PINN/blob/main/SE_PINN.ipynb.
