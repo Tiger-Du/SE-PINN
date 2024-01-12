@@ -14,6 +14,6 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 ### Usage
 
-Open the notebook interactively via Google Colab: https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/SE-PINN.ipynb.
+Google Colab (Interactive): https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/SE_PINN.ipynb
 
-Open the notebook non-interactively via GitHub: https://github.com/Tiger-Du/SE-PINN/blob/main/SE_PINN.ipynb.
+GitHub (Non-interactive): https://github.com/Tiger-Du/SE-PINN/blob/main/SE_PINN.ipynb
