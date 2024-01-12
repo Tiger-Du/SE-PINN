@@ -4,9 +4,13 @@ This is the official GitHub repository for _Solving the Schrödinger Equation vi
 
 The research was in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/ipek-oguz) at Vanderbilt University.
 
-**Figure: Animation of the Predicted Energy Eigenvector (Left) and the Predicted Energy Eigenvalue (Right)**
+**Figure 1: Animation of the Predicted Energy Eigenvector (Left) and the Predicted Energy Eigenvalue (Right) without Symmetry**
 
-![Animation of PINN](SE-PINN.gif)
+![Animation of PINN](animation%20(no%20symmetry).gif)
+
+**Figure 2: Animation of the Predicted Energy Eigenvector (Left) and the Predicted Energy Eigenvalue (Right) with Symmetry**
+
+![Animation of PINN](animation.gif)
 
 ## Usage
 
