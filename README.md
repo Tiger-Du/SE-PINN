@@ -2,7 +2,7 @@
 
 This is the official GitHub repository for _Solving the Schrödinger Equation via Physics-Informed Machine Learning_.
 
-In this research, a PyTorch model was developed and evaluated to solve the Schrodinger equation of quantum mechanics. The predictions of the model are constrained to respect the physical properties of symmetry, normality, and orthogonality as well as information from the Schrodinger equation itself via a custom loss function and a custom architectural layer in PyTorch.
+In this research, a PyTorch model is developed and evaluated to solve the Schrodinger equation of quantum mechanics. The predictions of the model are constrained to respect the physical properties of symmetry, normality, and orthogonality as well as information from the Schrodinger equation itself via a custom loss function and a custom architectural layer in PyTorch.
 
 This research was in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/ipek-oguz) at Vanderbilt University.
 
