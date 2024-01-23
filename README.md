@@ -8,13 +8,13 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 ### Demonstration
 
-**Figure 1**: No Enforced Symmetry: Animation of the Energy Eigenvector (Left) and the Energy Eigenvalue (Right)
+| **Figure 1**: No Enforcement of Exact Symmetry: Animation of the Energy Eigenvector (Left) and the Energy Eigenvalue (Right) |
+| --- |
+| ![Animation of PINN](assets/animation%20(no%20symmetry).gif) |
 
-![Animation of PINN](assets/animation%20(no%20symmetry).gif)
-
-**Figure 2**: Enforced Symmetry: Animation of the Energy Eigenvector (Left) and the Energy Eigenvalue (Right)
-
-![Animation of PINN](assets/animation.gif)
+| **Figure 2**: Enforcement of Exact Symmetry: Animation of the Energy Eigenvector (Left) and the Energy Eigenvalue (Right) |
+| --- |
+| ![Animation of PINN](assets/animation.gif) |
 
 ---
 
