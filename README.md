@@ -8,11 +8,13 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 ### Demonstration
 
-| **Figure 1**: No Enforcement of Exact Symmetry: Animation of the Energy Eigenvector (Left) and the Energy Eigenvalue (Right) |
+__Figure 1__ and __Figure 2__ are animations of the energy eigenvector and the energy eigenvalue that are predicted by the model as it trains. The enforcement of exact symmetry of the predicted energy eigenvector via an architectural layer of the model improves its convergence to the correct energy eigenvalue.
+
+| **Figure 1**: No Enforcement of Exact Symmetry via Architecture |
 | --- |
 | ![Animation of PINN](assets/animation%20(no%20symmetry).gif) |
 
-| **Figure 2**: Enforcement of Exact Symmetry: Animation of the Energy Eigenvector (Left) and the Energy Eigenvalue (Right) |
+| **Figure 2**: Enforcement of Exact Symmetry via Architecture |
 | --- |
 | ![Animation of PINN](assets/animation.gif) |
 
