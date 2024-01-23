@@ -10,11 +10,11 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 **Figure 1**: No Enforced Symmetry: Animation of the Energy Eigenvector (Left) and the Energy Eigenvalue (Right)
 
-![Animation of PINN](animation%20(no%20symmetry).gif)
+![Animation of PINN](assets/animation%20(no%20symmetry).gif)
 
 **Figure 2**: Enforced Symmetry: Animation of the Energy Eigenvector (Left) and the Energy Eigenvalue (Right)
 
-![Animation of PINN](animation.gif)
+![Animation of PINN](assets/animation.gif)
 
 ---
 
@@ -25,3 +25,9 @@ __Google Colab__ (Interactive): https://colab.research.google.com/github/Tiger-D
 __nbviewer__ (Non-interactive): https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/SE_PINN.ipynb
 
 __GitHub__ (Non-interactive): https://github.com/Tiger-Du/SE-PINN/blob/main/SE_PINN.ipynb
+
+---
+
+### License
+
+This repository is under the GPL-3.0 license.
