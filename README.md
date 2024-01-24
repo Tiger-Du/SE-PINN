@@ -2,7 +2,7 @@
 
 This is the official GitHub repository for _Solving the Schrödinger Equation via Physics-Informed Machine Learning_.
 
-Here a physics-informed neural network is developed and evaluated for solving the Schrödinger equation of quantum mechanics. The predictions of the model are constrained to respect the physical properties of symmetry, normality, and orthogonality as well as information from the Schrödinger equation itself via a custom loss function and a custom architectural layer in PyTorch.
+Here a physics-informed neural network is developed and evaluated for solving the Schrödinger equation of quantum mechanics. The predictions of the model are constrained to respect the physical properties of symmetry, normality, and orthogonality as well as information from the Schrödinger equation itself via a custom loss function and a custom architectural layer in PyTorch. The model learns not via supervised learning but via reinforcement learning (RL) from feedback from the Schrödinger equation.
 
 This research was in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/ipek-oguz) at Vanderbilt University.
 
@@ -10,7 +10,7 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 ### Demonstration
 
-__Figure 1__ and __Figure 2__ are animations of (a) the energy eigenvector and (b) the energy eigenvalue that are predicted by the model as it trains. The enforcement of exact symmetry of the predicted energy eigenvector via an architectural layer -- a "hub layer" -- improves the convergence of the model to the correct energy eigenvalue.
+__Figure 1__ and __Figure 2__ are animations of the ground state (left) and the energy of the ground state (right) that are predicted by the model as it trains. The physical system is the quantum harmonic oscillator, which is used to model diatomic molecules such as hydrogen halides and molecular oxygen. The enforcement of exact symmetry of the predicted ground state via a particular architectural layer -- a "hub layer" -- improves the convergence of the model to the correct energy.
 
 | **Figure 1**: No Enforcement of Exact Symmetry via Architecture |
 | --- |
