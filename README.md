@@ -24,11 +24,17 @@ __Figure 1__ and __Figure 2__ are animations of (a) the energy eigenvector and (
 
 ### Usage
 
-__Google Colab__ (Interactive): https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
+__Google Colab__ (Interactive)
 
-__nbviewer__ (Non-interactive): https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
+https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
 
-__GitHub__ (Non-interactive): https://github.com/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
+__nbviewer__ (Non-interactive)
+
+https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
+
+__GitHub__ (Non-interactive)
+
+https://github.com/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
 
 ---
 
