@@ -36,8 +36,9 @@ __GitHub__ (Non-interactive): https://github.com/Tiger-Du/SE-PINN/blob/main/SE_P
 
 ```
 @misc{
-  title={Solving the Schrodinger Equation via Physics-Informed Machine Learning},
   author={Tiger Du and Alexander Ahrens and Ipek Oguz},
+  school={Vanderbilt University},
+  title={Solving the Schrodinger Equation via Physics-Informed Machine Learning},
   year={2023}
 }
 ```
@@ -46,4 +47,4 @@ __GitHub__ (Non-interactive): https://github.com/Tiger-Du/SE-PINN/blob/main/SE_P
 
 ### License
 
-This repository is under the GPL-3.0 license.
+This repository is licensed under the GPL-3.0 license.
