@@ -53,4 +53,4 @@ https://github.com/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
 
 ### License
 
-This repository is licensed under the GPL-3.0 license.
+This repository is distributed under the GPL-3.0 license.
