@@ -1,56 +1,5 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-## __SE-PINN__
-
-This is the implementation of a physics-informed neural network (PINN) in PyTorch to solve the Schrodinger equation of quantum mechanics.
-
-__Integration of Physical Constraints__
-
-Four physical constraints are integrated into the model: normality, orthogonality, symmetry, and the Schrodinger equation itself.
-
-These physical constraints are integrated via two methods: (1) inclusion in the objective function (used for normality, orthogonality, and the Schrodinger equation) and (2) exact conservation via the architecture (used for symmetry).
-
-__(1) Normality__
-
-__Physics__: In the Copenhagen interpretation of quantum mechanics, the square of the modulus of the wavefunction is a probability of the observation of a state.
-
-__Mathematics__: Because of the probabilistic interpretation of the wavefunction, the sum of the squares of the modulus is equal to 1.
-
-__Computing__: To integrate normality, a component is included in the objective function.
-
-__Code__: `NL_loss = (torch.sum(wf**2) - 1/self.dx)**2`
-
-__(2) Orthogonality__
-
-__Physics__: Because measurements of physical quantities are real numbers (rather than complex numbers), physical operators are Hermitian.
-
-__Mathematics__: The set of all eigenvectors of any Hermitian operator is a basis of Hilbert space, so they are all orthogonal to each other.
-
-__Computing__: To integrate orthogonality, a component is included in the objective function.
-
-__Code__: `Orth_loss = (torch.sum(wf*self.basis_sum)*self.dx)**2`
-
-__(3) Symmetry__
-
-__Physics__: For particular quantum-mechanical potentials that are symmetric, the energy eigenvectors are also symmetric.
-
-__Mathematics__: Due to the mathematical fact that every function can be expressed as the sum of an even function and an odd function, its even part and its odd part can be separated and selected.
-
-__Computing__: To integrate symmetry, a custom architectural layer, a hub layer, is used at the end of the model.
-
-__Code__: `
-N = ((self.even * (1/2) * torch.mm(H_plus, self.weights.t()))
-           + (self.odd * (1/2) * torch.mm(H_minus, self.weights.t())))
-           `
-
-__(4) Information from the SE Itself__
-
-Last, the model is steered toward physical solutions by comparings its predictions to the Schrodinger equation itself and including the distance in the objective function.
-
-__Code__: `SE_loss = torch.sum((-0.5*dd + self.V*wf - energy*wf)**2)/self.N`
-
-### __(1/5) Preparation__
-"""
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -385,55 +334,57 @@ class WrappedPINN():
         ani.save(name+".gif", dpi=100, writer=PillowWriter(fps=50))
         plt.close()
 
-"""### __(4/5) Definition of Physical System__"""
+def main():
+    # Definition of Physical System (Quantum Harmonic Oscillator)
 
-# Definition of Physical System (Simple Harmonic Oscillator)
+    N = 500
+    x0, xN = -5.0, 5.0
+    dx = (xN - x0) / N
+    grid_params = x0, xN, dx, N
 
-N = 500
-x0, xN = -5.0, 5.0
-dx = (xN - x0) / N
-grid_params = x0, xN, dx, N
+    x = torch.linspace(x0, xN, N+1).view(-1, 1)
+    k = 100
+    V = 0.5 * k * x ** 2
 
-x = torch.linspace(x0, xN, N+1).view(-1, 1)
-k = 100
-V = 0.5 * k * x ** 2
+    # Solve via the numerical method.
 
-# Solve via the numerical method.
+    diagonal = 1 / dx**2 + V[1:-1].detach().cpu().numpy()[:,0]
+    edge = -0.5 / dx**2 * np.ones(diagonal.shape[0] - 1)
+    energies, eigenvectors = eigh_tridiagonal(diagonal, edge)
 
-diagonal = 1 / dx**2 + V[1:-1].detach().cpu().numpy()[:,0]
-edge = -0.5 / dx**2 * np.ones(diagonal.shape[0] - 1)
-energies, eigenvectors = eigh_tridiagonal(diagonal, edge)
+    # Normalization of eigenvectors.
+    norms = dx * np.sum(eigenvectors ** 2, axis=0)
+    eigenvectors /= np.sqrt(norms)
 
-# Normalization of eigenvectors.
-norms = dx * np.sum(eigenvectors ** 2, axis=0)
-eigenvectors /= np.sqrt(norms)
+    gnd_state = eigenvectors.T[0]
+    gnd_energy = energies[0]
 
-gnd_state = eigenvectors.T[0]
-gnd_energy = energies[0]
+    x = torch.linspace(x0, xN, N - 1).view(-1, 1)
+    V = 0.5 * k * x ** 2
 
-x = torch.linspace(x0, xN, N - 1).view(-1, 1)
-V = 0.5 * k * x ** 2
+    """### __(5/5) Application of Wrapped PINN__"""
 
-"""### __(5/5) Application of Wrapped PINN__"""
+    # Initialization of Wrapped PINN.
+    wrapped_pinn = WrappedPINN(grid_params, torch.tanh, V, sym=1)
+    wrapped_pinn.init_optimizer("LBFGS", lr=1e-3)
 
-# Initialization of Wrapped PINN.
-wrapped_pinn = WrappedPINN(grid_params, torch.tanh, V, sym=1)
-wrapped_pinn.init_optimizer("LBFGS", lr=1e-3)
+    # Exploration of the effect of training on the loss.
+    wrapped_pinn.train(100)
+    wrapped_pinn.plot_loss()
 
-# Exploration of the effect of training on the loss.
-wrapped_pinn.train(100)
-wrapped_pinn.plot_loss()
+    # Continuation of training.
+    wrapped_pinn.train(200)
 
-# Continuation of training.
-wrapped_pinn.train(200)
+    # Visualization.
+    wrapped_pinn.plot_loss()
+    wrapped_pinn.plot_energy()
+    wrapped_pinn.plot_wf(ref=gnd_state)
 
-# Visualization.
-wrapped_pinn.plot_loss()
-wrapped_pinn.plot_energy()
-wrapped_pinn.plot_wf(ref=gnd_state)
+    # Continuation of training.
+    wrapped_pinn.train(300)
 
-# Continuation of training.
-wrapped_pinn.train(300)
+    # Visualization via animation.
+    wrapped_pinn.create_gif("animation", ref_ener=energies[0], ref_wf=gnd_state)
 
-# Visualization via animation.
-wrapped_pinn.create_gif("animation", ref_ener=energies[0], ref_wf=gnd_state)
+if __name__ == "__main__":
+    main()
