@@ -1,10 +1,13 @@
 abstract: Solving the Schrodinger Equation via Physics-Informed Machine Learning
 authors:
-- family-names: Du
+- affiliation: Vanderbilt University
+  family-names: Du
   given-names: Tiger
-- family-names: Ahrens
+- affiliation: Vanderbilt University
+  family-names: Ahrens
   given-names: Alexander
-- family-names: Oguz
+- affiliation: Vanderbilt University
+  family-names: Oguz
   given-names: Ipek
 cff-version: 1.2.0
 license: GPL-3.0
