@@ -1,6 +1,6 @@
 ### SE-PINN
 
-This is the official GitHub repository for _Solving the Schrödinger Equation via Physics-Informed Machine Learning_.
+This is the official repository for _Solving the Schrödinger Equation via Physics-Informed Machine Learning_.
 
 Here a physics-informed neural network is developed and evaluated for solving the Schrödinger equation of quantum mechanics. The model is constrained to respect the physical properties of symmetry, normality, and orthogonality as well as information from the Schrödinger equation itself via a custom loss function and a custom architectural layer in PyTorch. In addition, the model learns not via supervised learning but via reinforcement learning (RL) from feedback from the Schrödinger equation.
 
