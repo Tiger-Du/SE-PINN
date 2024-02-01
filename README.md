@@ -22,7 +22,7 @@ __Figure 1__ and __Figure 2__ are animations of the ground state (left) and the 
 
 ---
 
-### Usage
+### Documentation
 
 __Google Colab__ (Interactive)
 
