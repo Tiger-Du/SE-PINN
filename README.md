@@ -32,10 +32,6 @@ __nbviewer__ (Non-interactive)
 
 https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
 
-__GitHub__ (Non-interactive)
-
-https://github.com/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
-
 ---
 
 ### Citation
