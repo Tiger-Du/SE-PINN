@@ -11,16 +11,3 @@ license: GPL-3.0
 message: Below is the citation for this repository.
 repository-code: https://github.com/Tiger-Du/SE-PINN
 title: SE-PINN
-preferred-citation:
-  authors:
-  - family-names: Du
-    given-names: Tiger
-  - family-names: Ahrens
-    given-names: Alexander
-  - family-names: Oguz
-    given-names: Ipek
-  institution:
-    name: Vanderbilt University
-  title: Solving the Schrodinger Equation via Physics-Informed Machine Learning:
-  type: article
-  year: 2023
