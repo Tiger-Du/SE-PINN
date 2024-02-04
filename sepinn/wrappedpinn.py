@@ -7,7 +7,7 @@ from matplotlib.animation import FuncAnimation, PillowWriter
 import torch
 import torch.nn as nn
 
-from pinn import PINN
+from sepinn.pinn import PINN
 
 class WrappedPINN():
     def __init__(self, grid_params, activation, potential, sym):
