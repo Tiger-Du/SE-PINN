@@ -8,10 +8,10 @@ from matplotlib.animation import FuncAnimation, PillowWriter
 # !pip install git+https://github.com/garrettj403/SciencePlots # Temporary
 # import scienceplots # Temporary
 # plt.style.use(['science','grid'])
-from scipy.linalg import eigh_tridiagonal, eigvalsh_tridiagonal
+from scipy.linalg import eigh_tridiagonal # eigvalsh_tridiagonal
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
+# import torch.nn.functional as F
 
 # !export LC_ALL="en_US.UTF-8"
 # !export LD_LIBRARY_PATH="/usr/lib64-nvidia"
@@ -231,9 +231,9 @@ class WrappedPINN():
 
     def closure(self):
         self.opt.zero_grad()
-        l = self.loss(self.x)
-        l.backward()
-        return l
+        loss_value = self.loss(self.x)
+        loss_value.backward()
+        return loss_value
 
     def loss(self, x):
         self.x.requires_grad = True
@@ -287,7 +287,7 @@ class WrappedPINN():
         plt.show()
 
     def plot_wf(self, idx=None, ref=None):
-        fig = plt.figure(figsize=(6,4))
+        # fig = plt.figure(figsize=(6,4))
         if idx is None:
             psi = self.cur_wf
         else:
@@ -301,6 +301,7 @@ class WrappedPINN():
         plt.ylabel("Energy Eigenvector")
         plt.title(f'Predicted Energy Eigenvector (E = {self.cur_energy:.2f}, norm = {torch.sum(psi ** 2) * self.dx:.2f})')
         plt.legend()
+        plt.rcParams["figure.figsize"] = (6,4)
         plt.show()
 
     def create_gif(self, name, ref_wf=None, ref_ener=None, epoch_range=None):
@@ -357,7 +358,7 @@ def main():
     eigenvectors /= np.sqrt(norms)
 
     gnd_state = eigenvectors.T[0]
-    gnd_energy = energies[0]
+    # gnd_energy = energies[0]
 
     x = torch.linspace(x0, xN, N - 1).view(-1, 1)
     V = 0.5 * k * x ** 2
