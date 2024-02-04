@@ -35,7 +35,7 @@ Usage in Python:
 ```
 from sepinn.wrappedpinn import WrappedPINN
 
-model = WrappedPINN()
+model = WrappedPINN(...)
 ```
 
 ---
