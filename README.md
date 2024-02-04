@@ -10,7 +10,7 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 ### Demonstration
 
-__Figure 1__ and __Figure 2__ are animations of the ground state (left) and the energy of the ground state (right) that are predicted by the model as it trains. The physical system is the quantum harmonic oscillator, which is used to model diatomic molecules such as molecules of hydrogen halides, nitrogen, and oxygen. The enforcement of exact symmetry on the prediction of the ground state via a particular architectural layer -- a "hub layer" -- improves the convergence of the model to the correct energy.
+__Figure 1__ and __Figure 2__ are animations of the ground state (_left_) and the energy of the ground state (_right_) that are predicted by the model as it trains. The physical system is the quantum harmonic oscillator, which is used to model diatomic molecules such as molecules of hydrogen halides, nitrogen, and oxygen. The enforcement of exact symmetry on the prediction of the ground state via a particular architectural layer -- a "hub layer" -- improves the convergence of the model to the correct energy.
 
 | **Figure 1**: No Enforcement of Exact Symmetry via Architecture |
 | --- |
@@ -24,18 +24,20 @@ __Figure 1__ and __Figure 2__ are animations of the ground state (left) and the 
 
 ### Usage
 
-Installation on operating system:
+__Installation__:
 
 ```
 pip install sepinn
 ```
 
-Usage in Python:
+__Usage__:
 
 ```
 from sepinn.wrappedpinn import WrappedPINN
 
 model = WrappedPINN(...)
+
+model.train(...)
 ```
 
 ---
@@ -67,4 +69,4 @@ https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_osc
 
 ### License
 
-This repository is licensed under the GPL-3.0 license.
+SE-PINN is licensed under the GPL-3.0 license.
