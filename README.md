@@ -26,11 +26,11 @@ __Figure 1__ and __Figure 2__ are animations of the ground state (left) and the 
 
 __Google Colab__ (Interactive)
 
-https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/sepinn/docs/sepinn.ipynb
+https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 
 __nbviewer__ (Non-interactive)
 
-https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/sepinn/docs/sepinn.ipynb
+https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 
 ---
 
