@@ -10,7 +10,7 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 ### Demonstration
 
-__Figure 1__ and __Figure 2__ are animations of the ground state (left) and the energy of the ground state (right) that are predicted by the model as it trains. The physical system is the quantum harmonic oscillator, which is used to model diatomic molecules such as those of hydrogen halides, nitrogen, and oxygen. The enforcement of exact reflectional symmetry on the prediction of the ground state via a particular architectural layer -- a "hub layer" -- improves the convergence of the model to the correct energy.
+__Figure 1__ and __Figure 2__ are animations of the ground state (left) and the energy of the ground state (right) that are predicted by the model as it trains. The physical system is the quantum harmonic oscillator, which is used to model diatomic molecules such as molecules of hydrogen halides, nitrogen, and oxygen. The enforcement of exact symmetry on the prediction of the ground state via a particular architectural layer -- a "hub layer" -- improves the convergence of the model to the correct energy.
 
 | **Figure 1**: No Enforcement of Exact Symmetry via Architecture |
 | --- |
@@ -37,9 +37,9 @@ https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
 ### Citation
 
 ```
-@misc{
-  author={Tiger Du and Alexander Ahrens and Ipek Oguz},
-  school={Vanderbilt University},
+@techreport{DuAhrensOguz2023,
+  author={Du, Tiger and Ahrens, Alexander and Oguz, Ipek},
+  institution={Vanderbilt University},
   title={Solving the Schrodinger Equation via Physics-Informed Machine Learning},
   year={2023}
 }
@@ -49,4 +49,4 @@ https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/SE-PINN/SE_PINN.ipynb
 
 ### License
 
-This repository is distributed under the GPL-3.0 license.
+This repository is licensed under the GPL-3.0 license.
