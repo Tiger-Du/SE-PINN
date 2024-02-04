@@ -39,9 +39,141 @@ def to_plot(x): return x.detach().cpu().numpy()
 """### __(2/5) Definition of PINN__"""
 
 class PINN(nn.Module):
+    """
+    Physics-informed neural network (PINN) to solve the Schrodinger equation.
+
+    Attributes
+    ----------
+    x0 : float
+        the spatial position of the leftmost point of the quantum-mechanical potential
+    xN : float
+        the spatial position of the rightmost point of the quantum-mechanical potential
+    dx : float
+        the uniform spatial Euclidean distance between adjacent points
+    N : int
+        the count of points
+    activation : builtin_function_or_method
+        the activation function
+    sym : int
+        whether to enforce even symmetry (1) or odd symmetry (-1) or not to enforce symmetry (0)
+
+    Methods
+    -------
+    swap_symmetry
+        Swap the symmetry of the prediction of the model between even symmetry and odd symmetry.
+
+    forward(x)
+        Forward pass.
+    """
+
+    def  __init__(self, grid_params, activation, sym = 0):
+        super(PINN, self).__init__()
+
+        self.x0, self.xN, self.dx, self.N = grid_params
+        self.activation = activation
+        self.sym = sym
+
+        # Architecture of the Model
+
+        self.energy_node = nn.Linear(1,1)
+        self.fc1_bypass = nn.Linear(1,50)
+        self.fc1 = nn.Linear(2,50)
+        self.fc2 = nn.Linear(50,50)
+
+        # Automatic detection of whether to enforce even symmetry or odd symmetry via a hub layer
+        if sym == 1:
+            self.output = HubLayer(50, 1, 1, 0) # Even Symmetry
+        elif sym == -1:
+            self.output = HubLayer(50, 1, 0, 1) # Odd Symmetry
+        else:
+            self.output = nn.Linear(50,1)
+
+    def swap_symmetry(self):
+        if self.sym == 0:
+            print("Tried to swap symmetry although none is enforced.")
+            return
+        self.output.flip_sym()
+
+    def forward(self, x):
+        # lambda layer for energy
+        energy = self.energy_node(torch.ones_like(x))
+
+        N = torch.cat((x,energy),1)
+        N = self.activation(self.fc1(N))
+        N = self.activation(self.fc2(N))
+        N = self.output(N) # where symmetrization occurs if enforced
+
+        wf = N
+
         return wf, energy
 
 class HubLayer(nn.Module):
+    """
+    Hub layer, which is used to constrain the prediction of the model to respect even symmetry
+    (symmetry about f(x) = 0) or odd symmetry (symmetry about f(x) = x). The mathematical basis is
+    presented at https://arxiv.org/pdf/1904.08991.pdf. The constructor is adapted from
+    https://auro-227.medium.com/writing-a-custom-layer-in-pytorch-14ab6ac94b77.
+
+    Attributes
+    ----------
+    size_in : int
+        the length of the input of the layer
+    size_out : int
+        the length of the output of the layer
+    weights : torch.nn.parameter.Parameter
+        the weights of the layer
+    bias : torch.nn.parameter.Parameter
+        the bias of the layer
+    even : int
+        1 to enforce even symmetry
+    odd : int
+        -1 to enforce odd symmetry
+
+    Methods
+    -------
+    flip_sym
+        Swap the symmetry between even symmetry and odd symmetry.
+
+    forward(x)
+        Forward pass.
+    """
+
+    def __init__(self, size_in, size_out, even, odd):
+        super().__init__()
+
+        self.size_in, self.size_out = size_in, size_out
+
+        weights = torch.Tensor(size_out, size_in)
+        self.weights = nn.Parameter(weights)
+
+        bias = torch.Tensor(size_out)
+        self.bias = nn.Parameter(bias)
+
+        self.even = even
+        self.odd = odd
+
+        # Initialization of Weights
+        nn.init.kaiming_uniform_(self.weights, a=np.sqrt(5))
+
+        # Initialization of Biases
+        fan_in, _ = nn.init._calculate_fan_in_and_fan_out(self.weights)
+        bound = 1 / np.sqrt(fan_in)
+        nn.init.uniform_(self.bias, -bound, bound)
+
+    def flip_sym(self):
+        self.even = 1 - self.even
+        self.odd = 1 - self.odd
+        return
+
+    def forward(self, x):
+        h_plus = x # x(t)
+        h_minus = torch.flip(x, [0]) # x(-t)
+        H_plus = h_plus + h_minus
+        H_minus = h_plus - h_minus
+
+        N = ((self.even * (1/2) * torch.mm(H_plus, self.weights.t()))
+           + (self.odd * (1/2) * torch.mm(H_minus, self.weights.t())))
+
         return N
 
 """### __(3/5) Definition of Wrapped PINN__"""
