@@ -24,13 +24,13 @@ __Figure 1__ and __Figure 2__ are animations of the ground state (_left_) and th
 
 ### Usage
 
-__Installation__:
+__Installation on OS__:
 
 ```
 pip install sepinn
 ```
 
-__Usage__:
+__Usage in Python__:
 
 ```
 from sepinn.wrappedpinn import WrappedPINN
