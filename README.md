@@ -22,6 +22,24 @@ __Figure 1__ and __Figure 2__ are animations of the ground state (left) and the 
 
 ---
 
+### Usage
+
+Installation on operating system:
+
+```
+pip install sepinn
+```
+
+Usage in Python:
+
+```
+from sepinn.wrappedpinn import WrappedPINN
+
+model = WrappedPINN()
+```
+
+---
+
 ### Documentation
 
 __Google Colab__ (Interactive)
