@@ -8,7 +8,7 @@ from scipy.linalg import eigh_tridiagonal
 import torch
 import torch.nn as nn
 
-import ./hublayer
+from sepinn.hublayer import HubLayer
 
 # Optional Hardware Acceleration
 if torch.cuda.is_available(): # Use T4 GPU on Google Colab
