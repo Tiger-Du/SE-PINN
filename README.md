@@ -14,11 +14,11 @@ __Figure 1__ and __Figure 2__ are animations of the ground state (left) and the 
 
 | **Figure 1**: No Enforcement of Exact Symmetry via Architecture |
 | --- |
-| ![Animation of PINN](assets/animation_without_enforced_symmetry.gif) |
+| ![Animation of PINN](assets/no_enforcement_of_symmetry.gif) |
 
 | **Figure 2**: Enforcement of Exact Symmetry via Architecture |
 | --- |
-| ![Animation of PINN](assets/animation_with_enforced_symmetry.gif) |
+| ![Animation of PINN](assets/enforcement_of_symmetry.gif) |
 
 ---
 
