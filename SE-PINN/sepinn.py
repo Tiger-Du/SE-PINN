@@ -13,10 +13,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-!export LC_ALL="en_US.UTF-8"
-!export LD_LIBRARY_PATH="/usr/lib64-nvidia"
-!export LIBRARY_PATH="/usr/local/cuda/lib64/stubs"
-!ldconfig /usr/lib64-nvidia
+# !export LC_ALL="en_US.UTF-8"
+# !export LD_LIBRARY_PATH="/usr/lib64-nvidia"
+# !export LIBRARY_PATH="/usr/local/cuda/lib64/stubs"
+# !ldconfig /usr/lib64-nvidia
 
 # Optional Hardware Acceleration
 if torch.cuda.is_available(): # Use T4 GPU on Google Colab
