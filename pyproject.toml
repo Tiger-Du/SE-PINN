@@ -1,0 +1,10 @@
+[project]
+name = sepinn
+version = 1.0.0
+dependencies = [
+    "matplotlib==3.7.1",
+    "numpy==1.23.5",
+    "scipy==1.11.4",
+    "torch==2.1.0+cu121"
+]
+requires-python = ">=3.10.12"
