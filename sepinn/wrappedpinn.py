@@ -5,9 +5,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, PillowWriter
 import torch
-import torch.nn as nn
 
 from sepinn.pinn import PINN
+
+# Optional Hardware Acceleration
+if torch.cuda.is_available(): # Use T4 GPU on Google Colab
+    torch.cuda.init()
+    torch.cuda.is_initialized()
+    torch.set_default_tensor_type('torch.cuda.FloatTensor') # torch.set_default_dtype() and torch.set_default_device()
+    device = "cuda" # torch.device("cuda")
+else:
+    device = "cpu"
+
+# This is a shortcut to plot pytorch tensors (they need to be in numpy form for matplotlib).
+def to_plot(x): return x.detach().cpu().numpy()
 
 class WrappedPINN():
     def __init__(self, grid_params, activation, potential, sym):
