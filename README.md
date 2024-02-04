@@ -44,7 +44,7 @@ model.train(...)
 
 ### Documentation
 
-A Jupyter notebook in which SE-PINN is applied to the quantum harmonic oscillator is included in `/docs` and is also accessible via Google Colab and nbviewer.
+A Jupyter notebook in which SE-PINN is applied to the quantum harmonic oscillator is included in `/docs/` and is also accessible via Google Colab and nbviewer.
 
 __Google Colab__ (Interactive)
 
