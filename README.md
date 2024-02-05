@@ -2,7 +2,7 @@
 
 This is the official repository for _Solving the Schrödinger Equation via Physics-Informed Machine Learning_.
 
-Here a physics-informed neural network (PINN) is developed in PyTorch for solving the Schrödinger equation (SE) of quantum mechanics. The model is constrained to predict quantum-mechanical states that respect the physical properties of symmetry, normality, and orthogonality as well as information from the Schrödinger equation itself -- all via a custom _loss function_ and a custom _architectural layer_ in PyTorch. In addition, the model learns not through supervised learning but through _reinforcement learning (RL)_ from feedback from the Schrödinger equation.
+Here a physics-informed neural network is developed in PyTorch for solving the Schrödinger equation of quantum mechanics. The model is constrained to predict quantum-mechanical states that respect the physical properties of symmetry, normality, and orthogonality as well as information from the Schrödinger equation itself -- all via a custom _loss function_ and a custom _architectural layer_ in PyTorch. In addition, the model learns not through supervised learning but through _reinforcement learning (RL)_ from feedback from the Schrödinger equation.
 
 This research was in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/ipek-oguz) at Vanderbilt University.
 
@@ -57,6 +57,8 @@ https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_osc
 ---
 
 ### Citation
+
+SE-PINN is citable via the BibTeX entry below.
 
 ```
 @techreport{DuAhrensOguz2023,
