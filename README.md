@@ -44,7 +44,7 @@ model.train(...)
 
 ### Documentation
 
-A Jupyter notebook in which SE-PINN is applied to the quantum harmonic oscillator is included in the `docs` folder and is also available through Google Colab and nbviewer.
+A Jupyter notebook is included as an example in the `docs` folder and is also available through Google Colab and nbviewer.
 
 __Google Colab__ (Interactive)
 
@@ -71,4 +71,4 @@ https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_osc
 
 ### License
 
-SE-PINN is under the GPL-3.0 license as specified in the [`LICENSE`](LICENSE) file.
+SE-PINN is licensed under the GPL-3.0 license.
