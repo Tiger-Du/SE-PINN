@@ -44,7 +44,7 @@ model.train(...)
 
 ### Documentation
 
-A Jupyter notebook is included as an example in the `docs` folder and is also available through Google Colab and nbviewer.
+A Jupyter notebook is included as an example in `docs` and is also available through Google Colab and nbviewer.
 
 __Google Colab__ (Interactive)
 
