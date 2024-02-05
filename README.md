@@ -24,7 +24,7 @@ __Figure 1__ and __Figure 2__ are animations of the ground state (_left_) and th
 
 ### Usage
 
-__Installation on OS__:
+__Installation from PyPI via pip__:
 
 ```
 pip install sepinn
