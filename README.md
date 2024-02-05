@@ -71,4 +71,4 @@ https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_osc
 
 ### License
 
-SE-PINN is under the GPL-3.0 license as specified in [LICENSE](LICENSE).
+SE-PINN is under the GPL-3.0 license as specified in the [`LICENSE`](LICENSE) file.
