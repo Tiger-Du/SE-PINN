@@ -2,7 +2,7 @@
 
 This is the official repository for _Solving the Schrödinger Equation via Physics-Informed Machine Learning_.
 
-Here a physics-informed neural network is developed in PyTorch for solving the Schrödinger equation of quantum mechanics. The model is constrained to predict quantum-mechanical states that respect the physical properties of symmetry, normality, and orthogonality as well as information from the Schrödinger equation itself -- all via (1) a custom loss function and (2) a custom architectural layer. In addition, the model learns not through supervised learning but through reinforcement learning (RL) from feedback from the Schrödinger equation.
+Here a physics-informed neural network is developed in PyTorch for solving the Schrödinger equation of quantum mechanics. The model is constrained to predict quantum-mechanical states that respect the physical properties of __symmetry__, __normality__, and __orthogonality__ as well as information from the Schrödinger equation itself — all via (1) a __custom loss function__ and (2) a __custom architectural layer__. In addition, the model learns not through supervised learning but through __reinforcement learning (RL)__ from feedback from the Schrödinger equation.
 
 This research was in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/ipek-oguz) at Vanderbilt University.
 
