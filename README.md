@@ -14,11 +14,11 @@ __Figure 1__ and __Figure 2__ are animations of the ground state (_left_) and th
 
 The enforcement of exact symmetry on the prediction of the ground state via a particular architectural layer — a "hub layer" — improves the convergence of the model to the correct energy.
 
-| **Figure 1**: No Enforcement of Exact Symmetry via Architecture |
+| **Figure 1**: Without Architectural Enforcement of Exact Symmetry |
 | --- |
 | ![Animation of PINN](assets/no_enforcement_of_symmetry.gif) |
 
-| **Figure 2**: Enforcement of Exact Symmetry via Architecture |
+| **Figure 2**: With Architectural Enforcement of Exact Symmetry |
 | --- |
 | ![Animation of PINN](assets/enforcement_of_symmetry.gif) |
 
