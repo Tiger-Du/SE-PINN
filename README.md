@@ -48,11 +48,11 @@ model.train(...)
 
 A Jupyter notebook is included for reference in `docs`, and it is also available through Google Colab and nbviewer.
 
-__Google Colab__ (Interactive)
+__Google Colab__ (_Interactive_)
 
 https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 
-__nbviewer__ (Non-interactive)
+__nbviewer__ (_Non-interactive_)
 
 https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 
