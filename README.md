@@ -10,7 +10,9 @@ This research was in collaboration with Alexander Ahrens and under the supervisi
 
 ### Demonstration
 
-__Figure 1__ and __Figure 2__ are animations of the ground state (_left_) and the energy of the ground state (_right_) that are predicted by the model as it trains. The physical system is the quantum harmonic oscillator, which is used to model diatomic molecules such as molecules of nitrogen, oxygen, and the hydrogen halides. The enforcement of exact symmetry on the prediction of the ground state via a particular architectural layer — a "hub layer" — improves the convergence of the model to the correct energy.
+__Figure 1__ and __Figure 2__ are animations of the ground state (_left_) and the energy of the ground state (_right_) that are predicted by the model as it trains. The physical system of interest is the quantum harmonic oscillator, which is used to model diatomic molecules such as diatomic nitrogen, diatomic oxygen, and the hydrogen halides.
+
+The enforcement of exact symmetry on the prediction of the ground state via a particular architectural layer — a "hub layer" — improves the convergence of the model to the correct energy.
 
 | **Figure 1**: No Enforcement of Exact Symmetry via Architecture |
 | --- |
