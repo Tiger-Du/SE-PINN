@@ -46,7 +46,7 @@ model.train(...)
 
 ### Documentation
 
-A Jupyter notebook is included for reference in `docs`, and it is also available through Google Colab and nbviewer.
+A Jupyter notebook is available for reference in `docs` as well as through Google Colab and nbviewer.
 
 __Google Colab__ (_Interactive_)
 
