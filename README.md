@@ -46,13 +46,13 @@ model.train(...)
 
 ### Documentation
 
-A Jupyter notebook is available for reference in `docs` as well as through Google Colab and nbviewer.
+A Jupyter notebook is available for reference in the `docs` folder as well as on Google Colab and nbviewer.
 
-__Google Colab__ (_Interactive_)
+__Google Colab__ (_Interactive_):
 
 https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 
-__nbviewer__ (_Non-interactive_)
+__nbviewer__ (_Non-interactive_):
 
 https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 
