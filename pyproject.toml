@@ -1,6 +1,8 @@
 [project]
 name = "sepinn"
 version = "1.0.0"
+description = "Solving the Schrödinger Equation via Physics-Informed Machine Learning"
+readme = "README.md"
 dependencies = [
     "matplotlib==3.7.1",
     "numpy==1.23.5",
