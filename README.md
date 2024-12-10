@@ -12,11 +12,11 @@ __Figure 1__ and __Figure 2__ are visualizations of the ground state (_left_) an
 
 The enforcement of symmetry on the prediction of the ground state via a special architectural layer of the model — a __"hub layer"__ — improves its convergence to the correct energy, as visualized in __Figure 2__.
 
-| **Figure 1**: Without Architectural Enforcement of Symmetry |
+| **Figure 1**: SE-PINN without Enforcement of Symmetry |
 | --- |
 | <img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/no_enforcement_of_symmetry.gif> |
 
-| **Figure 2**: With Architectural Enforcement of Symmetry |
+| **Figure 2**: SE-PINN with Enforcement of Symmetry |
 | --- |
 | <img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/enforcement_of_symmetry.gif> |
 
