@@ -22,6 +22,10 @@ The enforcement of symmetry on the prediction of the ground state via a special 
 | --- |
 | <img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/enforcement_of_symmetry.gif> |
 
+<img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/no_enforcement_of_symmetry.gif>
+
+<img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/enforcement_of_symmetry.gif>
+
 ---
 
 ### Usage
