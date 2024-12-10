@@ -11,8 +11,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = https://tiger-du.github.io/sepinn.html
-Repository = https://github.com/Tiger-Du/SE-PINN
+Homepage = "https://tiger-du.github.io/sepinn.html"
+Repository = "https://github.com/Tiger-Du/SE-PINN"
 
 [tool.setuptools]
 py-modules = []
