@@ -4,10 +4,10 @@ version = "1.0.9"
 description = "Solving the Schrödinger Equation via Physics-Informed Machine Learning"
 readme = "README.md"
 dependencies = [
-    "matplotlib>=3.7.1",
-    "numpy>=1.23.5",
-    "scipy>=1.11.4",
-    "torch>=2.1.0+cu121"
+    "matplotlib >= 3.7.1",
+    "numpy >= 1.23.5",
+    "scipy >= 1.11.4",
+    "torch >= 2.1.0+cu121"
 ]
 
 [project.urls]
