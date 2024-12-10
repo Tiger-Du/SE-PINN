@@ -1,6 +1,6 @@
 [project]
 name = "sepinn"
-version = "1.0.3"
+version = "1.0.5"
 description = "Solving the Schrödinger Equation via Physics-Informed Machine Learning"
 readme = "README.md"
 dependencies = [
@@ -9,6 +9,10 @@ dependencies = [
     "scipy==1.11.4",
     "torch==2.1.0+cu121"
 ]
+
+[project.urls]
+Homepage = https://tiger-du.github.io/sepinn.html
+Repository = https://github.com/Tiger-Du/SE-PINN
 
 [tool.setuptools]
 py-modules = []
