@@ -73,4 +73,4 @@ SE-PINN is citable via the BibTeX entry below.
 
 ### License
 
-SE-PINN is available under the GPL-3.0 license.
+SE-PINN is published under the GPL-3.0 license.
