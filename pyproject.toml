@@ -1,6 +1,6 @@
 [project]
 name = "sepinn"
-version = "1.0.5"
+version = "1.0.6"
 description = "Solving the Schrödinger Equation via Physics-Informed Machine Learning"
 readme = "README.md"
 dependencies = [
