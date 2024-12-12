@@ -36,7 +36,7 @@ pip install sepinn
 
 __(2) Import into Python__
 
-```
+```python
 from sepinn.wrappedpinn import WrappedPINN
 
 model = WrappedPINN(...)
