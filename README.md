@@ -1,4 +1,4 @@
-### Summary
+### SE-PINN
 
 [Webpage](https://tiger-du.github.io/sepinn.html) | [GitHub](https://github.com/Tiger-Du/SE-PINN) | [PyPI](https://pypi.org/project/sepinn/)
 
