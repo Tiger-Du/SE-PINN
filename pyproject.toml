@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sepinn"
-version = "1.0.12"
+version = "1.0.0"
 description = "Solving the Schrödinger Equation via Physics-Informed Machine Learning"
 readme = "README.md"
 dependencies = [
