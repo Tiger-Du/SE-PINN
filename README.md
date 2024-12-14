@@ -28,13 +28,13 @@ The enforcement of symmetry on the prediction of the ground state via a special 
 
 ### Usage
 
-__(1) Install from PyPI__
+__1. Install from PyPI__
 
 ```
 pip install sepinn
 ```
 
-__(2) Import into Python__
+__2. Import into Python__
 
 ```python
 from sepinn.wrappedpinn import WrappedPINN
