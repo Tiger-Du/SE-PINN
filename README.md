@@ -8,6 +8,15 @@ The model is constrained to predict quantum-mechanical states that respect the m
 
 SE-PINN was developed at Vanderbilt University in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/?pid=ipek-oguz).
 
+The design of SE-PINN is based on https://arxiv.org/abs/2203.00451 and https://arxiv.org/abs/1904.08991.
+
+In addition, SE-PINN has the following features:
+- L-BFGS optimization
+- A class that supports deterministic training, checkpointing of training, and visualization
+- `pip install sepinn` — A Python package on PyPI with CI/CD
+- Documentation as a [webpage](https://tiger-du.github.io/sepinn.html) and a [Google Colab notebook](https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
+)
+
 ---
 
 ### Demonstration
