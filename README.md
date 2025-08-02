@@ -1,6 +1,8 @@
-### SE-PINN
+# SE-PINN
 
 [Webpage](https://tiger-du.github.io/sepinn.html) | [GitHub](https://github.com/Tiger-Du/SE-PINN) | [PyPI](https://pypi.org/project/sepinn/)
+
+<img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/enforcement_of_symmetry.gif>
 
 SE-PINN is a physics-informed neural network in PyTorch that solves the Schrödinger equation of quantum mechanics.
 
@@ -17,9 +19,7 @@ In addition, SE-PINN has the following features:
 - Documentation as a [webpage](https://tiger-du.github.io/sepinn.html) and a [Google Colab notebook](https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 )
 
----
-
-### Demonstration
+## Demonstration
 
 __Figure 1__ and __Figure 2__ are visualizations of the ground state (_left_) and the energy of the ground state (_right_) that are predicted by the model as it trains. The physical system of interest is the __quantum harmonic oscillator__, which is used to model diatomic molecules such as diatomic nitrogen, diatomic oxygen, and the hydrogen halides.
 
@@ -33,17 +33,15 @@ The enforcement of symmetry on the prediction of the ground state via a special 
 | --- |
 | <img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/enforcement_of_symmetry.gif> |
 
----
+## Usage
 
-### Usage
-
-__1. Install from PyPI__
+__1. Install SE-PINN from PyPI.__
 
 ```
 pip install sepinn
 ```
 
-__2. Import into Python__
+__2. Import SE-PINN into Python.__
 
 ```python
 from sepinn.wrappedpinn import WrappedPINN
@@ -53,9 +51,7 @@ model = WrappedPINN(...)
 model.train(...)
 ```
 
----
-
-### Documentation
+## Documentation
 
 A Jupyter notebook is available for reference in the `docs` folder as well as through Google Colab and nbviewer.
 
@@ -67,11 +63,7 @@ __nbviewer__ (_Non-interactive_):
 
 https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 
----
-
-### Citation
-
-SE-PINN is citable via the BibTeX entry below.
+## Citation
 
 ```
 @techreport{DuAhrensOguz2023,
