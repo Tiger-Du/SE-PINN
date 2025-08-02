@@ -6,7 +6,7 @@
 
 SE-PINN is a physics-informed neural network in PyTorch that solves the Schrödinger equation of quantum mechanics.
 
-The model is constrained to predict quantum-mechanical states that respect the mathematical-physical properties of __symmetry__, __normality__, and __orthogonality__ — all via __(1) a custom loss function__ and __(2) a custom neural-network layer__. In addition, the model learns not through supervised learning but through __reinforcement learning (RL)__ via feedback from the Schrödinger equation itself.
+Through (a) a custom __loss function__ and (b) a custom __neural-network layer__, SE-PINN is constrained to predict quantum-mechanical states that satisfy the mathematical-physical properties of __symmetry__, __normality__, and __orthogonality__. In addition, the model learns not through supervised learning on labeled data but through __unsupervised learning__ via feedback from the Schrödinger equation itself.
 
 SE-PINN was developed at Vanderbilt University in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/?pid=ipek-oguz).
 
@@ -21,9 +21,9 @@ In addition, SE-PINN has the following features:
 
 ## Demonstration
 
-__Figure 1__ and __Figure 2__ are visualizations of the ground state (_left_) and the energy of the ground state (_right_) that are predicted by the model as it trains. The physical system of interest is the __quantum harmonic oscillator__, which is used to model diatomic molecules such as diatomic nitrogen, diatomic oxygen, and the hydrogen halides.
+__Figure 1__ and __Figure 2__ are both visualizations of the ground state (_left_) and the energy of the ground state (_right_) that are predicted by SE-PINN as it trains. The physical system of interest is the __quantum harmonic oscillator__, which is used to model diatomic molecules such as diatomic nitrogen, diatomic oxygen, and the hydrogen halides.
 
-The enforcement of symmetry on the prediction of the ground state via a special architectural layer of the model — a __"hub layer"__ — improves its convergence to the correct energy, as visualized in __Figure 2__.
+The enforcement of symmetry on the prediction of the ground state via a special architectural layer of the neural network — a __"hub layer"__ — improves its convergence to the correct energy, as visualized in __Figure 2__.
 
 | **Figure 1**: SE-PINN without Enforcement of Symmetry |
 | --- |
@@ -35,13 +35,13 @@ The enforcement of symmetry on the prediction of the ground state via a special 
 
 ## Usage
 
-__1. Install SE-PINN from PyPI.__
+__1. Install SE-PINN.__
 
 ```
 pip install sepinn
 ```
 
-__2. Import SE-PINN into Python.__
+__2. Import SE-PINN.__
 
 ```python
 from sepinn.wrappedpinn import WrappedPINN
