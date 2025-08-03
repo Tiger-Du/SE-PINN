@@ -12,7 +12,7 @@ SE-PINN is a physics-informed neural network in PyTorch that solves the Schrödi
 
 Through (a) a custom __loss function__ and (b) a custom __neural-network layer__, SE-PINN is constrained to predict quantum-mechanical states that satisfy the mathematical-physical properties of __symmetry__, __normality__, and __orthogonality__. In addition, the model learns not through supervised learning on labeled data but through __unsupervised learning__ via feedback from the Schrödinger equation itself.
 
-SE-PINN was developed at Vanderbilt University in collaboration with Alexander Ahrens and under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/?pid=ipek-oguz).
+SE-PINN was developed at Vanderbilt University by Tiger Du and Alexander Ahrens under the supervision of Prof. Ipek Oguz (https://engineering.vanderbilt.edu/bio/?pid=ipek-oguz).
 
 The design of SE-PINN is based on https://arxiv.org/abs/2203.00451 and https://arxiv.org/abs/1904.08991.
 
@@ -27,7 +27,7 @@ In addition, SE-PINN supports the following features:
 
 __Figure 1__ and __Figure 2__ are both visualizations of the ground state (_left_) and the energy of the ground state (_right_) that are predicted by SE-PINN as it trains. The physical system of interest is the __quantum harmonic oscillator__, which is used to model diatomic molecules such as diatomic nitrogen, diatomic oxygen, and the hydrogen halides.
 
-The enforcement of symmetry on the prediction of the ground state via a special architectural layer of the neural network — a __"hub layer"__ — improves its convergence to the correct energy, as visualized in __Figure 2__.
+As visualized in __Figure 2__, constraining SE-PINN via a special architectural layer — a __hub layer__ — to predict the ground state with exact symmetry improves its convergence to both the correct ground state and the correct energy.
 
 | **Figure 1**: SE-PINN without Enforcement of Symmetry |
 | --- |
