@@ -1,6 +1,10 @@
-# SE-PINN
+<h1 align="center">SE-PINN</h1>
 
-[Webpage](https://tiger-du.github.io/sepinn.html) | [GitHub](https://github.com/Tiger-Du/SE-PINN) | [PyPI](https://pypi.org/project/sepinn/)
+<p align="center">
+  <a href="https://tiger-du.github.io/sepinn.html">Webpage</a> |
+  <a href="https://github.com/Tiger-Du/SE-PINN">GitHub</a> |
+  <a href="https://pypi.org/project/sepinn/">PyPI</a>
+</p>
 
 <img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/enforcement_of_symmetry.gif>
 
@@ -19,7 +23,7 @@ In addition, SE-PINN supports the following features:
 - Documentation as a [webpage](https://tiger-du.github.io/sepinn.html) and a [Google Colab notebook](https://colab.research.google.com/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 )
 
-## Demonstration
+<h2 align="center">Example</h2>
 
 __Figure 1__ and __Figure 2__ are both visualizations of the ground state (_left_) and the energy of the ground state (_right_) that are predicted by SE-PINN as it trains. The physical system of interest is the __quantum harmonic oscillator__, which is used to model diatomic molecules such as diatomic nitrogen, diatomic oxygen, and the hydrogen halides.
 
@@ -33,7 +37,7 @@ The enforcement of symmetry on the prediction of the ground state via a special 
 | --- |
 | <img src=https://raw.githubusercontent.com/Tiger-Du/SE-PINN/main/assets/enforcement_of_symmetry.gif> |
 
-## Usage
+<h2 align="center">Usage</h2>
 
 __1. Install SE-PINN.__
 
@@ -51,7 +55,7 @@ model = WrappedPINN(...)
 model.train(...)
 ```
 
-## Documentation
+<h2 align="center">Documentation</h2>
 
 A Jupyter notebook is available for reference in the `docs` folder as well as through Google Colab and nbviewer.
 
@@ -63,7 +67,7 @@ __nbviewer__ (_Non-interactive_):
 
 https://nbviewer.org/github/Tiger-Du/SE-PINN/blob/main/docs/quantum_harmonic_oscillator.ipynb
 
-## Citation
+<h2 align="center">Citation</h2>
 
 ```
 @techreport{DuAhrensOguz2023,
