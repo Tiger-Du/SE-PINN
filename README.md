@@ -12,7 +12,7 @@ SE-PINN was developed at Vanderbilt University in collaboration with Alexander A
 
 The design of SE-PINN is based on https://arxiv.org/abs/2203.00451 and https://arxiv.org/abs/1904.08991.
 
-In addition, SE-PINN has the following features:
+In addition, SE-PINN supports the following features:
 - L-BFGS optimization
 - A class that supports deterministic training, checkpointing of training, and visualization
 - `pip install sepinn` — A Python package on PyPI with CI/CD
